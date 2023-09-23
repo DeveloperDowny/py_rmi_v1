@@ -2,7 +2,7 @@ import Pyro4
 
 def main():
     
-    server_uri = "PYRO:obj_1fcd4df59982483db002d1dd0b97405b@localhost:61673"
+    server_uri = "PYRO:obj_92a76ac3eb5648619c4e23e707b29f35@localhost:56690"
 
     
     remote_object = Pyro4.Proxy(server_uri)

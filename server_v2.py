@@ -1,12 +1,13 @@
 import Pyro4
 from pymongo import MongoClient
+import mlib
 
 
 @Pyro4.expose
 class DatabaseServer:
     def __init__(self):
         
-        self.client = MongoClient("mongodb+srv://varshil:FrTONHlYjkl3w7V4@url-shortner.bknujel.mongodb.net/url-shortner?retryWrites=true&w=majority")
+        self.client = MongoClient(mlib.mkey)
         self.db = self.client["mydatabase"]
 
     def insert_document(self, collection_name, document):
